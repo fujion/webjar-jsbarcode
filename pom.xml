@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.fujion.webjars</groupId>
+		<artifactId>fujion-webjars</artifactId>
+		<version>2.1.0</version>
+	</parent>
+
+	<name>Barcode Generation Library</name>
+	<artifactId>fujion-jsbarcode</artifactId>
+	<version>3.9.0-SNAPSHOT</version>
+	<description>Supports multiple barcode formats.</description>
+	
+	<properties>
+		<src.url>https://github.com/lindell/JsBarcode/archive/v${src.version}.zip</src.url>
+		<src.top>JsBarcode-${src.version}</src.top>
+		<systemjs>
+			{
+				"paths": {
+					"jsbarcode": "dist/JsBarcode.all.js"
+				}
+			}			
+		</systemjs>
+	</properties>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>precompile</id>
+						<configuration>
+							<target>
+								<get src="${src.url}" dest="${src.zipdir}/src.zip"/>
+								<unzip src="${src.zipdir}/src.zip" dest="${src.tmpdir}" />
+								<move todir="${webjar.target}">
+									<fileset dir="${src.rootdir}" includes="dist/**,*.txt,*.md"/>
+								</move>
+							</target>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
