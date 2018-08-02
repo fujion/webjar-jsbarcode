@@ -1,2 +1,3 @@
-# fujion-jsbarcode
-Web jar for https://github.com/lindell/JsBarcode.
+# webjar-jsbarcode
+Web jar for JsBarcode.
+https://github.com/lindell/JsBarcode
