@@ -9,7 +9,7 @@
 
 	<name>Barcode Generation Library</name>
 	<artifactId>webjar-jsbarcode</artifactId>
-	<version>3.9.0</version>
+	<version>3.9.0-1-SNAPSHOT</version>
 	<description>Supports multiple barcode formats.</description>
 	
 	<properties>
@@ -45,8 +45,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-  <scm>
-    <tag>3.9.0</tag>
-  </scm>
 </project>
