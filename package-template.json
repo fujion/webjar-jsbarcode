@@ -1,0 +1,8 @@
+{
+  "name": "${project.artifactId}",
+  "version": "${version.unrevise}",
+  "description": "${project.description}",
+  "dependencies": {
+    "jsbarcode": "${version.unrevise}"
+    }
+}
