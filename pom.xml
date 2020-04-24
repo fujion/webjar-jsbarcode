@@ -12,16 +12,6 @@
 	<version>3.11.0-1-SNAPSHOT</version>
 	<description>Supports multiple barcode formats.</description>
 	
-	<properties>
-		<systemjs>
-			{
-				"paths": {
-					"jsbarcode": "dist/JsBarcode.all.js"
-				}
-			}			
-		</systemjs>
-	</properties>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -30,9 +20,6 @@
 				<executions>
 					<execution>
 						<id>npm-install</id>
-						<configuration>
-							<skip>false</skip>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>
