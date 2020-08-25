@@ -4,12 +4,12 @@
 	<parent>
 		<groupId>org.fujion.webjars</groupId>
 		<artifactId>fujion-webjars</artifactId>
-		<version>3.0.0-SNAPSHOT</version>
+		<version>3.0.0</version>
 	</parent>
 
 	<name>Barcode Generation Library</name>
 	<artifactId>webjar-jsbarcode</artifactId>
-	<version>3.11.0-1-SNAPSHOT</version>
+	<version>3.11.0-1</version>
 	<description>Supports multiple barcode formats.</description>
 	
 	<build>
