@@ -1,0 +1,12 @@
+file_exists "import-map.json"
+file_exists "README.md"
+file_exists "MIT-LICENSE.txt"
+
+file_exists "dist/JsBarcode.all.js"
+file_exists "dist/barcodes/JsBarcode.codabar.min.js"
+file_exists "dist/barcodes/JsBarcode.code39.min.js"
+file_exists "dist/barcodes/JsBarcode.code128.min.js"
+file_exists "dist/barcodes/JsBarcode.ean-upc.min.js"
+file_exists "dist/barcodes/JsBarcode.itf.min.js"
+file_exists "dist/barcodes/JsBarcode.msi.min.js"
+file_exists "dist/barcodes/JsBarcode.pharmacode.min.js"
