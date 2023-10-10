@@ -9,11 +9,39 @@
 
 	<name>Barcode Generation Library</name>
 	<artifactId>webjar-jsbarcode</artifactId>
-	<version>3.11.5-1</version>
+	<version>3.11.5-1-SNAPSHOT</version>
 	<description>Supports multiple barcode formats.</description>
-	
+
+	<properties>
+		<npm-install.skip>false</npm-install.skip>
+	</properties>
+
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.fujion.webjars</groupId>
+				<artifactId>webjar-validator-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>validate-webjar</id>
+						<configuration>
+							<rules>
+								<rule>file_exists import-map.json</rule>
+								<rule>file_exists README.md</rule>
+								<rule>file_exists MIT-LICENSE.txt</rule>
+								<rule>file_exists dist/JsBarcode.all.js</rule>
+								<rule>file_exists dist/barcodes/JsBarcode.codabar.min.js</rule>
+								<rule>file_exists dist/barcodes/JsBarcode.code39.min.js</rule>
+								<rule>file_exists dist/barcodes/JsBarcode.code128.min.js</rule>
+								<rule>file_exists dist/barcodes/JsBarcode.ean-upc.min.js</rule>
+								<rule>file_exists dist/barcodes/JsBarcode.itf.min.js</rule>
+								<rule>file_exists dist/barcodes/JsBarcode.msi.min.js</rule>
+								<rule>file_exists dist/barcodes/JsBarcode.pharmacode.min.js</rule>
+							</rules>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<artifactId>maven-antrun-plugin</artifactId>
 				<executions>
